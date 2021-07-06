@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+            html,
+            body {
+              margin: 0;
+              height: 100%;
+              font-family: Arial, Helvetica, sans-serif;
+              background-color: #222;
+              color: whitesmoke;
+            }
+          </style>
+          <link
+            rel="stylesheet"
+            href="http://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.css"
+          />
+          <script
+            crossorigin
+            src="https://unpkg.com/react@16/umd/react.production.min.js"
+          ></script>
+          <script
+            crossorigin
+            src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+          ></script>
+          <script
+            crossorigin
+            src="http://unpkg.com/jest-lite@1.0.0-alpha.4/dist/core.js"
+          ></script>
+          <script
+            crossorigin
+            src="http://unpkg.com/jest-lite@1.0.0-alpha.4/dist/enzyme.js"
+          ></script>
+          <script
+            crossorigin
+            src="http://unpkg.com/jest-lite@1.0.0-alpha.4/dist/prettify.js"
+          ></script>
+        
+
+    <script src="./js/solution.js"></script>
+
+    <script>
+
+let openFile = function(event) {
+    let input = event.target;
+
+    const reader = new FileReader();
+    reader.onload = function() {
+        const text = reader.result;
+        const node = document.getElementById('output');
+        const { name, amount, error } = getAmountByText(text);
+        let msg = '';
+        if (error) {
+            msg = 'The file has format error(s)!';
+            
+        } else {
+            msg = `The amount to pay ${ name } is: ${ amount } USD`;
+        }
+        node.innerText = msg;
+    };
+    reader.readAsText(input.files[0]);
+};
+    </script>
+
+    </head>
+    <body>
+        <h2>Solution</h2>
+        <input type='file' accept='text/plain' onchange='openFile(event)'>
+        <hr>
+        <h2>Output</h2>
+        <div id='output'>...</div>
+        <hr>
+        <h2>Tests</h2>
+        <div id="tests"></div>
+        <script src="./js/tests.js"></script>
+    </body>
+</html>
