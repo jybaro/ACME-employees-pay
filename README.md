@@ -70,6 +70,6 @@ For testing, Jest-lite is used directly in the browser. There are three testing 
 1. **Pays**: Tests the pay a employee reveices.
 
 # How to run the program locally
-1. Download or clome the git project locally.
+1. Download or clone the git project locally.
 1. Open the index.html file with a browser.
 1. That's all, you are ready to load your .txt file! There are two files already created inside the GitHub project if you want to use them for testing.  
