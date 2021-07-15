@@ -1,0 +1,29 @@
+{
+  "name": "pagoporhoras",
+  "version": "1.0.0",
+  "description": "This solution implements the following exercise directly in the browser, using only HTML and Vanilla JavaScript.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start index.js --watch && pm2 log 0",
+    "view":"pm2 log 0",
+    "stop":"pm2 stop 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jybaro/ACME-employees-pay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jybaro/ACME-employees-pay/issues"
+  },
+  "homepage": "https://github.com/jybaro/ACME-employees-pay#readme",
+  "dependencies": {
+    "pm2": "^5.1.0"
+  }
+}

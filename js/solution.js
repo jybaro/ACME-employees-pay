@@ -101,3 +101,7 @@ const getAmountByText = (text) => {
     }
     return {name, amount, error};
 };
+
+if (exports) {
+    exports.getAmountByText = getAmountByText;
+}

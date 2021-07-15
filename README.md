@@ -61,7 +61,9 @@ Each phase is implemented into a JavaScript function inside ./js/solution.js fil
   * Output: Amount to be paid for the time worked in a specific day.
 
 # Approach and methodology
-The solution uses web technologies because it is easier and safer to run on any computer. The approach was firstly to validate the file data, and then to calculate the amount.  
+The solution listen changes inside "drophere" folder to read the file moved or copied into that destination. The approach was firstly to validate the file data format, and then to calculate the amount.  
+
+As the solution is "production ready", the script will not run with node but pm2.
 
 For testing, Jest-lite is used directly in the browser. There are three testing groups implemented in ./js/tests.js file:
 
@@ -70,6 +72,9 @@ For testing, Jest-lite is used directly in the browser. There are three testing 
 1. **Pays**: Tests the pay a employee reveices.
 
 # How to run the program locally
-1. Download or clone the git project locally.
-1. Open the index.html file with a browser.
-1. That's all, you are ready to load your .txt file! There are two files already created inside the GitHub project if you want to use them for testing.  
+1. npm init
+1. npm start
+1. In the terminal will appear the process ID, script name, mode, status, %CPU and RAM in use by the process. 
+1. Drop the file to be processed into "drophere" folder at the project root. There are two files already created inside the GitHub project if you want to use them for testing. 
+1. The result will appear in the terminal.
+1. To stop the process, Ctrl^C + npm stop
